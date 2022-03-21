@@ -1,0 +1,17 @@
+. ${ROOT_DIR}/${KERNEL_DIR}/build.config.common
+. ${ROOT_DIR}/${KERNEL_DIR}/build.config.aarch64
+
+CROSS_COMPILE=aarch64-linux-android-
+CROSS_COMPILE_ARM32=arm-linux-androideabi-
+CLANG_PREBUILT_BIN=prebuilts-master/clang/host/linux-x86/clang-r498229/bin
+LINUX_GCC_CROSS_COMPILE_PREBUILTS_BIN=prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
+LINUX_GCC_CROSS_COMPILE_ARM32_PREBUILTS_BIN=prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin
+DEFCONFIG=vendor/bengal-perf_defconfig
+LLVM=1
+FILES="
+arch/arm64/boot/Image
+arch/arm64/boot/dts/vendor/qcom/bengal.dtb
+vmlinux
+System.map
+.config
+"
